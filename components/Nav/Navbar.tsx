@@ -6,7 +6,7 @@ export default function Navbar() {
     function Logo() {
         return <div>
             <h1 className="text-5xl">Кристина Кислюк</h1>
-            <p className="text-main-red text-3xl w-2/3">pinterest strategist & content creator</p>
+            <p className="text-main-red text-2xl w-2/3 my-2 tracking-widest">pinterest strategist & content creator</p>
         </div>
     }
     return (<LocalFontTitleLayout>
