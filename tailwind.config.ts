@@ -23,6 +23,10 @@ const config: Config = {
       colors: {
         'main-red': '#C21615'
       },
+      btn: {
+        'border-radius': '15px',
+        'border': '2px solid red'
+      }
     },
   },
   plugins: [],
