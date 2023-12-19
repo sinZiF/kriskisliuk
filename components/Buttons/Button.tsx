@@ -19,7 +19,7 @@ export default function Button(
             className="ml-5"
             src="/arrow.png"
             alt="arrow"
-            width={100}
+            width={60}
             height={2} />)}
     </button>
 }
