@@ -1,10 +1,14 @@
 import Image from "next/image"
 import Button from "@/components/Buttons/Button"
-import LocalFontLayout from "./local-fonts/localFontLayout"
+import LocalFontLayout from "./ui/local-fonts/localFontLayout"
+import Navbar from "@/components/Nav/Navbar"
+import About from "@/components/About/About"
 export default function Home() {
   return (
     <LocalFontLayout>
-      <main className="relative flex justify-end ml-10">
+      <div className="m-auto px-16 flex flex-col max-w-screen-2xl">
+
+      <main className="relative flex justify-end ml-10 pb-32">
         <div className="absolute -top-20 left-2">
           <Image
             src='/kris.svg'
@@ -18,6 +22,8 @@ export default function Home() {
             <Button className="flex items-center text-2xl  px-5 py-1 my-5 text-main-red " title="услуги" isArrow={true}/>
         </div>
       </main>
+      </div>
+      <About />
     </LocalFontLayout>
   )
 }

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import LocalFontTitleLayout from "@/app/local-fonts/localFontTitleLayout"
+import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout"
 
 export default function Navbar() {
     const listNav: string[] = ['обо мне', 'услуги', 'кейсы', 'отзывы', 'контакты']
@@ -10,26 +10,28 @@ export default function Navbar() {
         </div>
     }
     return (<LocalFontTitleLayout>
-        <nav className="py-7 tracking-widest">
-            <ul className="flex justify-between">
-                <Logo />
-                <div className="flex gap-8 text-2xl pt-5 tracking-widest">
-                    {listNav.map((name: string) =>
-                        <li key={name}>
-                            <Link href="/"
-                                className='gap-px tracking-normal uppercase h-min'>
-                                {name}
-                            </Link>
-                        </li>
-                        )
-                    }
-                    {/* <li className="text-main-red">обо мне</li>
-                    <li>услуги</li>
-                    <li>кейсы</li>
-                    <li>отзывы</li>
-                    <li>контакты</li> */}
-                </div>
-            </ul>
-        </nav>
+        <div className="m-auto px-16 flex flex-col max-w-screen-2xl">
+            <nav className="py-7 tracking-widest">
+                <ul className="flex justify-between">
+                    <Logo />
+                    <div className="flex gap-8 text-2xl pt-5 tracking-widest">
+                        {listNav.map((name: string) =>
+                            <li key={name}>
+                                <Link href="/"
+                                    className='gap-px tracking-normal uppercase h-min'>
+                                    {name}
+                                </Link>
+                            </li>
+                            )
+                        }
+                        {/* <li className="text-main-red">обо мне</li>
+                        <li>услуги</li>
+                        <li>кейсы</li>
+                        <li>отзывы</li>
+                        <li>контакты</li> */}
+                    </div>
+                </ul>
+            </nav>
+        </div>
     </LocalFontTitleLayout>)
 }
