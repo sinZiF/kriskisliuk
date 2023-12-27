@@ -1,12 +1,12 @@
 import Image from "next/image"
 
 interface ButtonProps {
-    title: string,
     isArrow: boolean,
-    className: string
+    className: string,
+    children: React.ReactNode
 }
 export default function Button(
-    {title, isArrow, className} : ButtonProps
+    {isArrow, className, children} : ButtonProps
     ) {
     return <button className={`${className}
         uppercase
@@ -15,7 +15,7 @@ export default function Button(
         border-2
         border-main-red
         rounded-md`}>
-        {title} {isArrow && (<Image
+        {children} {isArrow && (<Image
             className="ml-5"
             src="/arrow.png"
             alt="arrow"

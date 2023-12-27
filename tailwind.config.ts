@@ -22,12 +22,19 @@ const config: Config = {
       },
       colors: {
         'main-red': '#C21615',
+        'color-white': '#F5F5F5',
         'about': '#EFEAE7',
         'title-color': '#828282'
       },
       btn: {
         'border-radius': '15px',
         'border': '2px solid red'
+      },
+      minHeight: {
+        120: '30rem'
+      },
+      maxWidth: {
+        120: '30rem'
       }
     },
   },
