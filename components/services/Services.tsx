@@ -2,7 +2,7 @@ import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
 import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
 import Title from "@/app/ui/title/Title";
 import Image from "next/image";
-import Button from "../Buttons/Button";
+import Button from "../buttons/Button";
 import { Fragment } from "react";
 
 
