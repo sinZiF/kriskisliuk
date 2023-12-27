@@ -1,6 +1,5 @@
 import Link from "next/link"
 import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout"
-import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout"
 
 export default function Navbar() {
     const listNav: string[] = ['обо мне', 'услуги', 'кейсы', 'отзывы', 'контакты']
@@ -10,10 +9,7 @@ export default function Navbar() {
             <p className="text-main-red text-2xl w-2/3 my-2 tracking-widest">pinterest strategist & content creator</p>
         </div>
     }
-    return (
-    <LocalFontLayout classNameSection="bg-color-white">
-
-    <LocalFontTitleLayout>
+    return (<LocalFontTitleLayout>
         <div className="m-auto px-16 flex flex-col max-w-screen-2xl">
             <nav className="py-7 tracking-widest">
                 <ul className="flex justify-between">
@@ -32,7 +28,5 @@ export default function Navbar() {
                 </ul>
             </nav>
         </div>
-    </LocalFontTitleLayout>
-    </LocalFontLayout>
-    )
+    </LocalFontTitleLayout>)
 }
