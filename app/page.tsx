@@ -1,12 +1,13 @@
 import Image from "next/image"
 import Button from "@/components/buttons/Button"
 import LocalFontLayout from "./ui/local-fonts/localFontLayout"
+import Navbar from "@/components/nav/Navbar"
 import About from "@/components/about/About"
 import Services from "@/components/services/Services"
 export default function Home() {
   return (
     <>
-      <LocalFontLayout>
+      <LocalFontLayout classNameSection="bg-color-white">
         <main className="relative flex justify-end ml-10 pb-32">
           <div className="absolute -top-20 left-2">
             <Image
