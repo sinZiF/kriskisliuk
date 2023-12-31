@@ -1,7 +1,7 @@
 import Image from "next/image"
-import Button from "@/components/buttons/Button"
+import Button from "@/components/Buttons/Button"
 import LocalFontLayout from "./ui/local-fonts/localFontLayout"
-import About from "@/components/about/About"
+import About from "@/components/About/About"
 import Services from "@/components/services/Services"
 import PhotographicWorks from "@/components/photographicWorks/PhotographicWorks"
 export default function Home() {
