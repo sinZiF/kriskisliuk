@@ -1,8 +1,8 @@
 import Image from "next/image"
-import Button from "@/components/Buttons/Button"
+import Button from "@/components/buttons/Button"
 import LocalFontLayout from "./ui/local-fonts/localFontLayout"
-import Navbar from "@/components/Nav/Navbar"
-import About from "@/components/About/About"
+import Navbar from "@/components/nav/Navbar"
+import About from "@/components/about/About"
 import Services from "@/components/services/Services"
 export default function Home() {
   return (
