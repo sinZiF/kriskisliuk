@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Button from "@/components/buttons/Button"
 import LocalFontLayout from "./ui/local-fonts/localFontLayout"
-import Navbar from "@/components/nav/Navbar"
 import About from "@/components/about/About"
 import Services from "@/components/services/Services"
+import PhotographicWorks from "@/components/photographicWorks/PhotographicWorks"
 export default function Home() {
   return (
     <>
@@ -25,6 +25,7 @@ export default function Home() {
       </LocalFontLayout>
       <About />
       <Services />
+      <PhotographicWorks />
     </>
   )
 }
