@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import '@/css/globals.css'
-import Navbar from '@/components/Nav/Navbar'
-import About from '@/components/about/About'
+import Navbar from '@/components/nav/Navbar'
 
 export const metadata: Metadata = {
   title: 'kriskisliuk',
