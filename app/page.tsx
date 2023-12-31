@@ -4,6 +4,7 @@ import LocalFontLayout from "./ui/local-fonts/localFontLayout"
 import About from "@/components/about/About"
 import Services from "@/components/services/Services"
 import PhotographicWorks from "@/components/photographicWorks/PhotographicWorks"
+import Cases from "@/components/cases/Cases"
 export default function Home() {
   return (
     <>
@@ -26,6 +27,7 @@ export default function Home() {
       <About />
       <Services />
       <PhotographicWorks />
+      <Cases />
     </>
   )
 }
