@@ -6,7 +6,7 @@ export default function Cases() {
     return(
         <LocalFontLayout>
             <LocalFontTitleLayout>
-                <Title>КЕЙСЫ</Title>
+                <Title>КЕЙСЫ test</Title>
             </LocalFontTitleLayout>
         </LocalFontLayout>
     )
