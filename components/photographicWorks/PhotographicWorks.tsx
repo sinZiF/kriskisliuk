@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function PhotographicWorks() {
     return(
-        <LocalFontLayout id="phorographic" classNameSection="bg-color-white">
+        <LocalFontLayout id="phorographic">
             <LocalFontTitleLayout>
-                <Title className="text-title-color my-12">фотоработы</Title>
+                <Title className="text-title-color">фотоработы</Title>
             </LocalFontTitleLayout>
             <div className="grid xl:grid-cols-12 gap-4 mb-12 grid-cols-6">
                 <picture className="grid col-span-2 "><Image src="/PhotoWorks/nature.jpg" alt="nature" width={300} height={300}/></picture>
