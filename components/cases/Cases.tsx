@@ -1,11 +1,12 @@
 import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
 import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
 import Title from "@/app/ui/title/Title";
-import { title } from "process";
+import Image from "next/image";
 
 const dataCases = [
     {
-        title: 'Аня | Контентмейкер',
+        title: ['Аня', 'Контентмейкер'],
+        srcImg: '/cases/ania.jpg',
         description: [
             '- Разработка стратегии продвижения под вашу нишу;',
             '- Регулярный постинг пинов;',
@@ -16,7 +17,7 @@ const dataCases = [
         ]
     },
     {
-        title: 'Ольга | Фотограф',
+        title: ['Ольга', 'Фотограф'],
         description: [
             '- Разработка стратегии продвижения под вашу нишу;',
             '- Регулярный постинг пинов;',
@@ -24,7 +25,7 @@ const dataCases = [
         ]
     },
     {
-        title: 'Яна | Графический дизайнер',
+        title: ['Яна', 'Графический дизайнер'],
         description: [
             '-  Разработка стратегии продвижения под вашу нишу;',
             '- Регулярный постинг пинов;',
@@ -39,18 +40,26 @@ const dataCases = [
     }
 ]
 interface CaseType {
-    title: string;
+    titleName: string;
+    title:  string;
+    // srcImg: string;
+    // nameImg: string;
     description: string[];
     className?: string;
 }
-function Case({title, description, className} : CaseType) {
+function Case({titleName, title, description, className} : CaseType) {
     return(
-        <div className={`grid gap-2 col-span-7 bg-about rounded-2xl ${className}`}>
+        <div className={`grid col-span-7 bg-about rounded-2xl p-10 ${className}`}>
             <div>
-                {title}
+                <h3 className="my-2 text-4xl">{titleName} <span className="text-2xl">| {title}</span></h3>
             </div>
-            <div>
-                {description.map(text => <p key={title}>{text}</p>)}
+            <div className="flex gap-10 font-bold tracking-widest leading-6">
+                <div>
+                    {description.map(cur => <p key={cur}>{cur}</p>)}
+                </div>
+                <div className="grid grid-cols-5 grid-rows-1 content-center justify-center m-auto">
+                    <Image className="col-start-2 col-span-4" alt='img' src='/cases/ania.jpg' width={350} height={300} />
+                </div>
             </div>
         </div>
     )
@@ -62,10 +71,10 @@ export default function Cases() {
             <LocalFontTitleLayout>
                 <Title className="text-title-color">КЕЙСЫ</Title>
             </LocalFontTitleLayout>
-            <div className="grid grid-cols-12 grid-rows-4-[1fr_1fr_1fr]">
-                <Case className="order-2 col-start-1 col-span-7 row-start-3 row-span-3 bg-title-color" title="Аня | Контентмейкер" description={dataCases[0].description} />
-                <Case className="order-1 col-start-2 col-span-9 row-start-1 row-span-3 bg-main-red" title="Аня | Контентмейкер" description={dataCases[0].description} />
-                <Case className="order-3 col-start-6 col-span-7 row-start-2 row-span-3" title="Аня | Контентмейкер" description={dataCases[0].description} />
+            <div className="grid grid-cols-12 grid-rows-4-[1fr_1fr_1fr] mb-16">
+                <Case className="order-3 col-start-1 col-span-6 row-start-3 row-span-3 text-title-color" titleName={dataCases[0].title[0]} title={dataCases[0].title[1]} description={dataCases[0].description} />
+                <Case className="order-1 col-start-2 col-span-9 row-start-1 row-span-3 bg-white border-2 border-main-red text-main-red" titleName={dataCases[1].title[0]} title={dataCases[1].title[1]} description={dataCases[1].description} />
+                <Case className="order-2 col-start-6 col-span-7 row-start-2 row-span-3 bg-title-color text-white" titleName={dataCases[2].title[0]} title={dataCases[2].title[1]} description={dataCases[2].description} />
             </div>
         </LocalFontLayout>
     )
