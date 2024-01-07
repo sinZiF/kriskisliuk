@@ -5,6 +5,7 @@ import Services from "@/components/services/Services"
 import PhotographicWorks from "@/components/photographicWorks/PhotographicWorks"
 import About from "@/components/about/About"
 import Cases from "@/components/cases/Cases"
+import Opinions from "@/components/opinions/Opinions"
 export default function Home() {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Home() {
       <Services />
       <PhotographicWorks />
       <Cases />
+      <Opinions />
     </>
   )
 }
