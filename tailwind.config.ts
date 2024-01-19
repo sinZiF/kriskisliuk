@@ -21,10 +21,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
+        'white': '#FFFFFF',
         'main-red': '#C21615',
         'color-white': '#F5F5F5',
         'about': '#EFEAE7',
-        'title-color': '#828282'
+        'title-color': '#828282',
+        'footer-color': '#4C4C4C'
       },
       btn: {
         'border-radius': '15px',
