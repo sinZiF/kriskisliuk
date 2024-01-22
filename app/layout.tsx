@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import '@/css/globals.css'
+import '@ionic/react/css/core.css';
 import Navbar from '@/components/nav/Navbar'
 
 export const metadata: Metadata = {

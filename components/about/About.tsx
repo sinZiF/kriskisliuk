@@ -9,7 +9,7 @@ export default function About() {
         )
     }
     return(
-        <LocalFontLayout id="about" classNameSection="pt-60 text-title-color" classNameDiv="pb-14" bgColor="bg-about">
+        <LocalFontLayout id="about" classNameSection="pt-32 text-title-color" classNameDiv="pb-14" bgColor="bg-about">
             <LocalFontTitleLayout>
                 <Title className="mb-6">обо мне</Title>
             </LocalFontTitleLayout>

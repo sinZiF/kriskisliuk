@@ -16,7 +16,7 @@ export default function LocalFontLayout({
     bgColor = 'bg-color-white'
   }: Attributes) {
     return <section id={id} className={`${myFont.className} ${classNameSection} ${bgColor}`}>
-      <div className={`${classNameDiv} m-auto px-16 flex flex-col max-w-screen-2xl`}>
+      <div className={`${classNameDiv} m-auto s:px-4 md:px-16 flex flex-col max-w-screen-2xl min-w-80`}>
           {children}
       </div>
     </section>
