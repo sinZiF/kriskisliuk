@@ -62,7 +62,7 @@ export default function Navbar() {
                                     </div>
                                 </div>
                         </div>
-                        <div className={`${isMenuOpen ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-x-[-5%] flex flex-col justify-center items-center gap-4 pt-28 s:h-screen s:w-screen s:bg-about`}>
+                        <div className={`${isMenuOpen ? '' : 'hidden'} fixed overflow-hidden top-0 left-0 right-0 translate-x-[-5%] flex flex-col justify-center items-center gap-4 pt-28 s:h-screen s:w-screen s:bg-about`}>
                             {/* {isMenuOpen ? '' : <TextLogo />} */}
                         {/* flex gap-4 lg:gap-8 sm:text-2xl pt-4 tracking-widest md:block md:flex-row  */}
                             {navigationLinks.map((name: string) =>
