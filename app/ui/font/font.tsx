@@ -1,5 +1,4 @@
 import localFont from 'next/font/local'
-import { Fragment } from 'react'
 
 export const myFont = localFont({
     src: './berold_regular.otf',

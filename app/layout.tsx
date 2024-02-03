@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
-import '@/css/globals.css'
+import type { Metadata } from 'next';
+import '@/css/globals.css';
 import '@ionic/react/css/core.css';
-import Navbar from '@/components/nav/Navbar'
+import Navbar from '@/components/nav/Navbar';
 
 export const metadata: Metadata = {
   title: 'kriskisliuk',

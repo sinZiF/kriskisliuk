@@ -1,24 +1,39 @@
 'use client'
+// nextjs component
 import Link from "next/link";
-import { myFont } from "@/app/ui/font/font";
+import Image from "next/image";
+// react hook
+import { useState } from "react";
+// icons
+import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
+//local font
 import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
 import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
-import { useState } from "react";
+//my component
+import TextLogo from "@/app/ui/textLogo/TextLogo";
 
 export default function Navbar() {
     const navigationLinks: string[] = ['обо мне', 'услуги', 'кейсы', 'отзывы', 'контакты'];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    function Logo() {
-        return <div className="s:text-2xl">
-            <h1 className="md:text-5xl">Кристина Кислюк</h1>
-            <div className={`${myFont.className} text-main-red s:text-xs md:text-2xl my-2 tracking-widest font-black`}>
-                <p>pinterest strategist</p>
-                <p>& content creator</p>
-            </div>
-            {/* <Button className="text-xs px-4 py-2" width={30}>
-                <Link href='#services'>услуги</Link>
-            </Button> */}
+    // function Logo() {
+    //     return <div className="s:text-2xl">
+    //         <h1 className="md:text-5xl">Кристина Кислюк</h1>
+    //         <div className={`${myFont.className} text-main-red s:text-xs md:text-2xl my-2 tracking-widest font-black`}>
+    //             <p>pinterest strategist</p>
+    //             <p>& content creator</p>
+    //         </div>
+    //     </div>
+    // }
+
+    function IMG_LOGO() {
+        return <Image src='/logo-bg.png' alt="logo" width={30} height={30}></Image>
+    }
+
+    function BurgerMenu() {
+        return <div onClick={toggleMenu}>
+            {isMenuOpen ? <IoMdClose /> : <CiMenuBurger />}
         </div>
     }
 
@@ -27,65 +42,44 @@ export default function Navbar() {
       }
 
     return (
-    <LocalFontLayout classNameSection="bg-color-white">
+    <LocalFontLayout classNameSection="bg-color-main-red">
 
     <LocalFontTitleLayout>
-        <nav className="py-7 tracking-widest">
-            <ul className="flex justify-between lg:flex-row s:flex-col">
-                <Logo />
-                <div className="flex gap-4 lg:gap-8 sm:text-2xl pt-4 tracking-widest s:hidden md:block md:flex-row">
-                    {navigationLinks.map((name: string) =>
-                        <li key={name}>
-                            <Link href="/"
-                                className='gap-px tracking-normal uppercase h-min w-full'>
-                                {name}
-                            </Link>
-                        </li>
-                        )
-                    }
-                </div>
-            </ul>
-            {/* <div className="container mx-auto px-4 h-full">
-        <div className="flex justify-between items-center h-full">
-          <Logo />
-          <div className="flex md:hidden">
-            <button
-              className="text-main-red w-12"
-              onClick={toggleMenu}
-            >
-              <svg viewBox="0 0 24 24" className="fill-current">
-                {isMenuOpen ? (
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M19.293 4.293a1 1 0 0 0-1.414-1.414L12 10.586 5.121 3.707a1 1 0 0 0-1.414 1.414L10.586 12l-6.879 6.879a1 1 0 1 0 1.414 1.414L12 13.414l6.879 6.879a1 1 0 0 0 1.414-1.414L13.414 12l6.879-6.879z"
-                  />
-                ) : (
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm1 5a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H5z"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
-          <ul
-            className={`${
-              isMenuOpen ? 'block' : 'hidden'
-            } md:flex md:items-center md:justify-end text-xl`}
-          >
-            {navigationLinks.map((name) => (
-              <li key={name} className="md:ml-6 mt-3 md:mt-0">
-                <Link href="/" className="uppercase tracking-widest">
-                    {name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div> */}
-        </nav>
+        <div className="transform transition-all duration-200">
+            <nav className="s:py-6 tracking-widest">
+                <ul className="">
+                    <div className="">
+                        <div className="flex flex-col text-title-color">
+                            <TextLogo bool={!isMenuOpen} className="order-2 z-10" />
+                            <div className="flex justify-between order-1">
+                                    <div>
+                                        <IMG_LOGO />
+                                    </div>
+                                    <div className="z-10">
+                                        <button onClick={toggleMenu} className="text-black">
+                                            {isMenuOpen ? <IoMdClose /> : <CiMenuBurger />}
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                        <div className={`${isMenuOpen ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-x-[-5%] flex flex-col justify-center items-center gap-4 pt-28 s:h-screen s:w-screen s:bg-about`}>
+                            {/* {isMenuOpen ? '' : <TextLogo />} */}
+                        {/* flex gap-4 lg:gap-8 sm:text-2xl pt-4 tracking-widest md:block md:flex-row  */}
+                            {navigationLinks.map((name: string) =>
+                                <li key={name}>
+                                    <Link href="/"
+                                        className='gap-px tracking-normal uppercase h-min w-full s:text-title-color s:text-2xl'>
+                                        {name}
+                                    </Link>
+                                </li>
+                                )
+                            }
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+          {/* </div> */}
+      </div>
     </LocalFontTitleLayout>
     </LocalFontLayout>
     )
