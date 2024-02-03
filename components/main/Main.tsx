@@ -5,44 +5,26 @@ import Link from "next/link";
 
 export default function Main() {
     return(
-        <LocalFontLayout classNameSection="bg-color-white" id="main">
-            <main className="s:pt-24">
-                <div className="
-                    s:fixed
-                    s:top-16
-                    left-16
-                    s:w-64">
-                    <Image
+        <LocalFontLayout classNameSection="s:bg-gradient-to-t from-about from-70% to-color-white to-20%" id="main">
+            <main className="grid grid-cols-12 grid-rows-4 gap-2 s:-mt-16 s:pb-10">
+                <div className="grid s:row-start-1 s:row-end-4 s:col-start-3 s:col-end-13">
+                    <Image className=""
                         src='/kris.svg'
                         alt="kristsina"
                         width={700}
-                        height={700}
+                        height={200}
                     />
                 </div>
-                <div className='
-                    font-medium
-                    s:pt-16
-                    s:absolute
-                    s:pr-4
-                    s:top-56
-                    text-base
-                    tracking-wide
-                    leading-normal'>
+                <div className='s:row-start-3 s:row-end-5 s:col-start-1 s:col-end-12 s:mt-16'>
                     <h2>Я не умею читать мысли, но я точно знаю как сделать так, чтобы ваш контент искали на <span className="text-main-red uppercase font-bold">Pinterest</span></h2>
-                    <Button className="
-                        s:font-black
-                        s:absolute
-                        s:-top-28
-                        s:w-28
-                        s:text-[10px]
-                        s:border-[1px]
+                </div>
+                    <Button className=" s:row-start-1 s:col-start-1 s:col-end-6 s:h-8 self-end
                         flex
                         items-center
                         py-1
                         text-main-red" width={30}>
-                            <Link href='#services'>услуги</Link>
+                            <Link href='#services' className="s:text-[12px]">услуги</Link>
                     </Button>
-                </div>
             </main>
       </LocalFontLayout>
     )
