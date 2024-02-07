@@ -1,13 +1,17 @@
 import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
+import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
 import Image from "next/image";
 import Button from "../buttons/Button";
 import Link from "next/link";
+import TextLogo from "@/app/ui/textLogo/TextLogo";
+import { myFontTitle } from "@/app/ui/font/font";
 
 export default function Main() {
     return(
-        <LocalFontLayout classNameSection="s:bg-gradient-to-t from-about from-70% to-color-white to-20%" id="main">
-            <main className="grid grid-cols-12 grid-rows-4 gap-2 s:-mt-16 s:pb-10">
-                <div className="grid s:row-start-1 s:row-end-4 s:col-start-3 s:col-end-13">
+        <LocalFontLayout classNameSection="s:bg-gradient-to-t from-about from-50% to-color-white to-50% h-lvh" id="main">
+            <main className="grid grid-cols-12 grid-rows-[35px_1fr_1fr_1fr] s:pb-4">
+                <TextLogo bool={true}  className={`${myFontTitle.className} s:row-start-2 s:row-span-2 s:col-start-1 s:col-span-12 justify-items-center font-black`}/>
+                <div className="grid s:row-start-2 s:row-end-4 s:col-start-3 s:col-end-13 mt-8">
                     <Image className=""
                         src='/kris.svg'
                         alt="kristsina"
@@ -15,16 +19,16 @@ export default function Main() {
                         height={200}
                     />
                 </div>
-                <div className='s:row-start-3 s:row-end-5 s:col-start-1 s:col-end-12 s:mt-16'>
+                <div className='s:row-start-4 s:row-end-5 s:col-start-1 s:col-end-12'>
                     <h2>Я не умею читать мысли, но я точно знаю как сделать так, чтобы ваш контент искали на <span className="text-main-red uppercase font-bold">Pinterest</span></h2>
                 </div>
-                    <Button className=" s:row-start-1 s:col-start-1 s:col-end-6 s:h-8 self-end
-                        flex
-                        items-center
-                        py-1
-                        text-main-red" width={30}>
-                            <Link href='#services' className="s:text-[12px]">услуги</Link>
-                    </Button>
+                <Button className=" s:row-start-2 s:col-start-1 s:col-end-6 s:h-8 self-end
+                    flex
+                    items-center
+                    py-1
+                    text-main-red" width={30}>
+                        <Link href='#services' className="s:text-[12px]">услуги</Link>
+                </Button>
             </main>
       </LocalFontLayout>
     )
