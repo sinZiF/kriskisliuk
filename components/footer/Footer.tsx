@@ -37,7 +37,7 @@ const SOCIAL_NETWORK: Array<Network> = [
 
 export default function Footer() {
     return(
-        <LocalFontLayout classNameSection="bg-title-color pb-8">
+        <LocalFontLayout id="contacts" classNameSection="bg-title-color pb-8">
         <LocalFontTitleLayout>
             <Title className="text-white">КОНТАКТЫ</Title>
         </LocalFontTitleLayout>
