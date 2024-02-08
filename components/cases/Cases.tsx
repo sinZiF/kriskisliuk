@@ -67,7 +67,7 @@ function Case({titleName, title, description, className} : CaseType) {
 
 export default function Cases() {
     return(
-        <LocalFontLayout>
+        <LocalFontLayout id="cases">
             <LocalFontTitleLayout>
                 <Title className="text-title-color">КЕЙСЫ</Title>
             </LocalFontTitleLayout>
