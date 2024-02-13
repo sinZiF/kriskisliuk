@@ -1,6 +1,6 @@
-import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
-import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
-import Title from "@/app/ui/title/Title";
+import LocalFontLayout from "@/ui/local-fonts/localFontLayout";
+import LocalFontTitleLayout from "@/ui/local-fonts/localFontTitleLayout";
+import Title from "@/ui/title/Title";
 
 export default function About() {
     function LiEl({children} : {children: React.ReactNode}) {

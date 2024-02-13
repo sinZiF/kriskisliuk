@@ -1,6 +1,3 @@
-import Image from "next/image"
-import Button from "@/components/buttons/Button"
-import LocalFontLayout from "./ui/local-fonts/localFontLayout"
 import Services from "@/components/services/Services"
 import PhotographicWorks from "@/components/photographicWorks/PhotographicWorks"
 import About from "@/components/about/About"
@@ -13,12 +10,12 @@ export default function Home() {
   return (
     <>
       <Main />
-      <About />
-      <Services />
-      <PhotographicWorks />
-      <Cases />
-      <Opinions />
-      <Footer />
+      {/* <About /> */}
+      {/* <Services /> */}
+      {/* <PhotographicWorks /> */}
+      {/* <Cases /> */}
+      {/* <Opinions /> */}
+      {/* <Footer /> */}
     </>
   )
 }
