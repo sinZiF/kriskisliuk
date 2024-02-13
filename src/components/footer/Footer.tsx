@@ -1,8 +1,8 @@
-import { myFontTitle } from "@/app/ui/font/font";
-import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
-import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
-import Title from "@/app/ui/title/Title";
-import ButtonSocialNetwork from "../buttons/ButtonSocialNetwork";
+import { myFontTitle } from "@/ui/font/font";
+import LocalFontTitleLayout from "@/ui/local-fonts/localFontTitleLayout";
+import LocalFontLayout from "@/ui/local-fonts/localFontLayout";
+import Title from "@/ui/title/Title";
+import ButtonSocialNetwork from "../../ui/buttons/ButtonSocialNetwork";
 
 type Network = {
     name: string;

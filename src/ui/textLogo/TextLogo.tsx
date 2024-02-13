@@ -1,5 +1,3 @@
-'use client'
-
 export default function TextLogo({bool, className} : {className: string, bool: boolean}) {
     return <div className={`${className} s:text-2xl`}>
         {bool ? <div  className={className}>

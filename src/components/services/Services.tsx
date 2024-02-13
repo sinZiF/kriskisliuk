@@ -1,9 +1,8 @@
-import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
-import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
-import Title from "@/app/ui/title/Title";
+import LocalFontLayout from "@/ui/local-fonts/localFontLayout";
+import LocalFontTitleLayout from "@/ui/local-fonts/localFontTitleLayout";
+import Title from "@/ui/title/Title";
 import Image from "next/image";
-import Button from "../buttons/Button";
-import { Fragment } from "react";
+import Button from "../../ui/buttons/Button";
 
 
 // data source for loading the local lists services

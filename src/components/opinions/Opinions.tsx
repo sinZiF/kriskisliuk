@@ -1,6 +1,6 @@
-import LocalFontLayout from "@/app/ui/local-fonts/localFontLayout";
-import LocalFontTitleLayout from "@/app/ui/local-fonts/localFontTitleLayout";
-import Title from "@/app/ui/title/Title";
+import LocalFontLayout from "@/ui/local-fonts/localFontLayout";
+import LocalFontTitleLayout from "@/ui/local-fonts/localFontTitleLayout";
+import Title from "@/ui/title/Title";
 import Image from "next/image";
 
 const srcOpinions = ['/opinions/opinion.PNG', '/opinions/opinion_2.PNG'];
